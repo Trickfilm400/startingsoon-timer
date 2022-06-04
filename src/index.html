@@ -40,9 +40,13 @@
 </head>
 <body>
     <h1 id="countdown"></h1>
-    <h2 id="finishtext">Jetzt gehts los!</h2>
+    <h2 id="finishtext">Starting now!</h2>
     <script src="assets/js/startingsoon.js"></script>
     <script>
+        const languages = {
+            "de": "Jetzt gehts los!",
+            "en": "Starting now!"
+        }
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
         if (urlParams.has("time")) {
@@ -51,6 +55,10 @@
         if (urlParams.has("color")) {
             countdown.style.color = urlParams.get("color")
             finishtext.style.color = urlParams.get("color")
+        }
+        if (urlParams.has("lang")) {
+            const lang = urlParams.get("lang");
+            finishtext.innerText = languages[lang] || languages["en"];
         }
     </script>
 </body>
