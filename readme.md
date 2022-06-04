@@ -24,3 +24,5 @@ Only `English` and `German` languages are supported right now
 - `http://localhost:63342/startingsoon-timer/index.html?time=1654517897&color=%23fa1c6b`
 - `http://localhost:63342/startingsoon-timer/index.html?time=1654517897&color=red&lang=de`
 - `http://localhost:63342/startingsoon-timer/index.html?time=1654517897`
+
+![Example Image](exampleImage.png)
